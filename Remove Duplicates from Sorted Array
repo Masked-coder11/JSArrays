@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let n= nums.length
+    let start=1, curr=1
+    while(curr<n){
+        if(nums[curr]!=nums[curr-1]){
+            nums[start] = nums[curr]
+            start++
+        }
+        curr++
+    }
+    return start
+};
