@@ -1,0 +1,19 @@
+class Solution {
+    getSecondLargest(arr) {
+        // code here
+        let n = arr.length
+        let l=-1e9, s=-1e9
+        for(let i=0 ; i<n; i++){
+            if(l==arr[i]) continue;
+            else if(l<arr[i]){
+                s=l
+                l=arr[i]
+            }
+            else if(s<arr[i]){
+                s=arr[i]
+            }
+        }
+        if(s==-1e9) s=-1
+        return s
+    }
+}
