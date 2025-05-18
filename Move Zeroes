@@ -1,0 +1,20 @@
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let n=nums.length
+    let i=0, start=0
+    while(i<n){
+        if(nums[i]!=0){
+            nums[start]=nums[i];
+            start++;
+        }
+        i++;
+    }
+    while(start<n){
+        nums[start]=0
+        start++
+    }
+    return
+};
